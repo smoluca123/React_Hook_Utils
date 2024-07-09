@@ -1,5 +1,5 @@
 {
-  "name": "react-hooks-utils",
+  "name": "@lucan1/react-hooks",
   "version": "1.0.0",
   "license": "MIT",
   "description": "A React hooks library",
@@ -24,6 +24,10 @@
     "build": "rollup -c",
     "prepare": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smoluca123/React_Hook_Utils"
+  },
   "peerDependencies": {
     "react": "^18"
   },
@@ -35,9 +39,8 @@
     "react": "18",
     "rollup": "^4.18.1",
     "rollup-plugin-dts": "^6.1.1",
-    "typescript": "^5.5.3"
-  },
-  "dependencies": {
+    "typescript": "^5.5.3",
     "tslib": "^2.6.3"
-  }
+  },
+  "dependencies": {}
 }
