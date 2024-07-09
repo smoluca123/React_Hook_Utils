@@ -1,5 +1,5 @@
 {
-  "name": "react-use-hooks",
+  "name": "@lucan1/react-hooks",
   "version": "1.0.0",
   "license": "MIT",
   "description": "A React hooks library",
@@ -39,9 +39,8 @@
     "react": "18",
     "rollup": "^4.18.1",
     "rollup-plugin-dts": "^6.1.1",
-    "typescript": "^5.5.3"
-  },
-  "dependencies": {
+    "typescript": "^5.5.3",
     "tslib": "^2.6.3"
-  }
+  },
+  "dependencies": {}
 }
