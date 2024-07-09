@@ -1,5 +1,5 @@
 {
-  "name": "react-hooks-utils",
+  "name": "react-use-hooks",
   "version": "1.0.0",
   "license": "MIT",
   "description": "A React hooks library",
@@ -23,6 +23,10 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smoluca123/React_Hook_Utils"
   },
   "peerDependencies": {
     "react": "^18"
