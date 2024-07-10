@@ -21,3 +21,5 @@ Compatible with React v18.0.0+.
 - `usePrevious`
 - `useToggle`
 - `useTimeout`
+- `useDebounceFn`
+- `useAsync`

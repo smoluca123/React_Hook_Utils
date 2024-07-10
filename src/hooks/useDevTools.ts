@@ -5,6 +5,7 @@ import {
   launch,
   setDetectDelay,
 } from 'devtools-detector';
+import { DEFAULT_DELAY } from '../constant';
 
 /**
  *
@@ -12,7 +13,9 @@ import {
  * @returns True if DevTools are open, false otherwise.
  */
 
-export const useDevTools = (detectDelayMs: number | string = 300): boolean => {
+export const useDevTools = (
+  detectDelayMs: number | string = DEFAULT_DELAY
+): boolean => {
   const [isDevToolsOpen, setIsDevToolsOpen] = useState<boolean>(false);
 
   useEffect(() => {

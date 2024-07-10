@@ -6,3 +6,5 @@ export { usePrevious } from './hooks/usePrevious';
 export { useDevTools } from './hooks/useDevTools';
 export { useToggle } from './hooks/useToggle';
 export { useTimeout } from './hooks/useTimeout';
+export { useDebounceFn } from './hooks/useDebounceFn';
+export { useAsync } from './hooks/useAsync';
