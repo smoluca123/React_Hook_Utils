@@ -11,11 +11,7 @@ export default [
         format: 'esm',
       },
     ],
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-    ],
+    plugins: [resolve(), typescript({ tsconfig: './tsconfig.json' })],
     external: ['react'],
   },
   {

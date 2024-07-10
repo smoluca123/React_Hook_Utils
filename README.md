@@ -23,4 +23,3 @@ Compatible with React v18.0.0+.
 - `useTimeout`
 - `useDebounceFn`
 - `useAsync`
-- `useFetch`
