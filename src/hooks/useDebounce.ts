@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { DEFAULT_DELAY } from '../constant';
 
 /**
  * A hook that delays updating a value for the specified time.
@@ -16,7 +17,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
  *
  * // debouncedText will update only if text doesn't change for delay times (default: 300ms)
  */
-export function useDebounce<T>(value: T, delay: number = 300): T {
+export function useDebounce<T>(value: T, delay: number = DEFAULT_DELAY): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const valueRef = useRef<T>(value);

@@ -1,6 +1,19 @@
 import { useCallback, useEffect, useRef } from 'react';
+import { DEFAULT_DELAY } from '../constant';
 
-export function useTimeout(callback: () => void, delay: number) {
+/**
+ *
+ * @param callback The callback function to be executed after the delay.
+ * @param delay The delay in milliseconds. Default is 300ms.
+ * @returns [clear, reset] - The clear function to cancel the timeout, and the reset function to restart the
+ * @example
+ * const [clear, reset] = useTimeout(() => console.log('Hello, timeout'), 5000);
+ */
+
+export function useTimeout(
+  callback: () => void,
+  delay: number = DEFAULT_DELAY
+) {
   const callbackRef = useRef(callback);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -27,4 +40,5 @@ export function useTimeout(callback: () => void, delay: number) {
     set();
     return clear;
   }, [set, clear, delay]);
+  return { clear, reset };
 }

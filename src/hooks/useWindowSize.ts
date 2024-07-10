@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
+import { DEFAULT_DELAY } from '../constant';
 
 interface WindowSize {
   width: number;
@@ -6,7 +7,7 @@ interface WindowSize {
 }
 
 // Hàm debounce
-const debounce = (fn: Function, ms = 300) => {
+const debounce = (fn: Function, ms = DEFAULT_DELAY) => {
   let timeoutId: ReturnType<typeof setTimeout>;
   return function (this: any, ...args: any[]) {
     clearTimeout(timeoutId);
@@ -37,7 +38,7 @@ const debounce = (fn: Function, ms = 300) => {
  * // useWindowSize will update only if window size doesn't change for delay times (default: 300ms)
  */
 
-export function useWindowSize(debounceMs = 300): WindowSize {
+export function useWindowSize(debounceMs = DEFAULT_DELAY): WindowSize {
   // Lazy initialization
   const getSize = (): WindowSize => ({
     width: window.innerWidth,
