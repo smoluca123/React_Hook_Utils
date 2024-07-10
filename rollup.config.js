@@ -1,4 +1,5 @@
 import typescript from '@rollup/plugin-typescript';
+import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import dts from 'rollup-plugin-dts';
 
@@ -11,7 +12,11 @@ export default [
         format: 'esm',
       },
     ],
-    plugins: [resolve(), typescript({ tsconfig: './tsconfig.json' })],
+    plugins: [
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
+    ],
     external: ['react'],
   },
   {
