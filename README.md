@@ -10,10 +10,14 @@ Compatible with React v18.0.0+.
 
 ### Install
 
-`npm i @lucan1/react-hooks`
+`npm i @smojs/react-hooks`
 
 ### Hooks
 
 - `useDebounce`
 - `useLocalStorage`
 - `useWindowSize`
+- `useDevTools`
+- `usePrevious`
+- `useToggle`
+- `useTimeout`
